@@ -13,14 +13,22 @@ namespace linq
             var check2 = numbers.Any(a => a==2);
             var selectFirst = numbers.Where(a => a == 3).First();//age nabashe exception
             var selectFirstDefault = numbers.Where(a => a == 13).FirstOrDefault(); // age nabashe meghdar default
-            var single = numbers.Where(a => a == 45).Single();//meghdar yeksan dashte bashe exception
+            var single = numbers.Where(a => a == 25).Single();//meghdar yeksan dashte bashe exception
             var singleOrDefault = numbers.Where(a => a == 45).SingleOrDefault(); //meghdar yeksan dashte bashe meghdar default miare.
             Console.WriteLine(selectFirst);
 
 
-            string [] names = {"zahra", "rahim", "reza", "fatima", "hassan"};
-            var hasI = names.Where(name => name.Contains('i') || name.Contains('I').ToArray();
+            string [] names = {"zahra", "rahim", "reza", "fatima", "hassan", "Sahar"};
+            var hasI = names.Where(name => name.Contains('i') || name.Contains('I')).ToArray();
             var startWithS = names.Where(name => name[0] == 's' || name[0] == 'S').ToArray();
+            foreach(string name in hasI){
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
+            foreach(string name in startWithS){
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
             
              Person [] persons = {new Person(1, "rahim", "reazaee"), new Person(2, "hassan", "bagheri"), new Person(3, "maryam", "mirzaee")};
               Hoghoogh [] hoghooghs = {new Hoghoogh(1, 1000, 1000, 1000), new Hoghoogh(2, 2000, 3000, 1000), new Hoghoogh(3, 5000, 6000, 4000)};
